@@ -1,7 +1,7 @@
 %global _empty_manifest_terminate_build 0
 Name:           python-sysv-ipc
 Version:        1.1.0
-Release:        1
+Release:        2
 Summary:        System V IPC primitives (semaphores, shared memory and message queues) for Python
 License:        BSD
 URL:            http://semanchuk.com/philip/sysv_ipc/
@@ -15,9 +15,7 @@ Provides:       python-sysv-ipc
 # Base build requires
 BuildRequires:  python3-devel
 BuildRequires:  python3-setuptools
-BuildRequires:  python3-cffi
 BuildRequires:  gcc
-BuildRequires:  gdb
 %description -n python3-sysv-ipc
 System V IPC primitives (semaphores, shared memory and message queues) for Python
 
@@ -73,5 +71,8 @@ mv %{buildroot}/doclist.lst .
 %{_docdir}/*
 
 %changelog
+* Thu Mar 03 2022 zhaoshuang <zhaoshuang@uniontech.com> - 1.1.0-2
+- remove unnecessary buildrequires
+
 * Tue Aug 03 2021 OpenStack_SIG <openstack@openeuler.org> - 1.1.0-1
 - Package Spec generate
